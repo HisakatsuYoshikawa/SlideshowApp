@@ -88,7 +88,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="513"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZA-ID-38R">
-                                <rect key="frame" x="0.0" y="589" width="414" height="30"/>
+                                <rect key="frame" x="191.5" y="589" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="8rm-En-Szu" kind="unwind" unwindAction="unwind:" id="DrN-7o-MsV"/>
@@ -98,10 +98,10 @@
                         <viewLayoutGuide key="safeArea" id="6X3-yu-XFO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CZA-ID-38R" firstAttribute="leading" secondItem="6X3-yu-XFO" secondAttribute="leading" id="3zz-Ok-nHV"/>
+                            <constraint firstItem="CZA-ID-38R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6X3-yu-XFO" secondAttribute="leading" id="3zz-Ok-nHV"/>
                             <constraint firstItem="BhC-2T-QLZ" firstAttribute="leading" secondItem="6X3-yu-XFO" secondAttribute="leading" id="5yi-XZ-oN8"/>
                             <constraint firstItem="BhC-2T-QLZ" firstAttribute="top" secondItem="6X3-yu-XFO" secondAttribute="top" id="Hvr-3x-Liv"/>
-                            <constraint firstItem="6X3-yu-XFO" firstAttribute="trailing" secondItem="CZA-ID-38R" secondAttribute="trailing" id="jXC-ZM-h0d"/>
+                            <constraint firstItem="6X3-yu-XFO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CZA-ID-38R" secondAttribute="trailing" id="jXC-ZM-h0d"/>
                             <constraint firstItem="CZA-ID-38R" firstAttribute="top" secondItem="BhC-2T-QLZ" secondAttribute="bottom" constant="32" id="jm9-OA-aUT"/>
                             <constraint firstItem="6X3-yu-XFO" firstAttribute="bottom" secondItem="CZA-ID-38R" secondAttribute="bottom" constant="243" id="npy-ek-Q8r"/>
                             <constraint firstItem="CZA-ID-38R" firstAttribute="centerX" secondItem="hIN-xf-ep2" secondAttribute="centerX" id="ovq-9X-bS2"/>
