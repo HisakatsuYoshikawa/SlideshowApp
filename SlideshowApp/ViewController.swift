@@ -22,6 +22,12 @@ class ViewController: UIViewController {
       
         //用意した遷移先の変数imageView2にimageViewを画像として渡す
             next?.imageView2 = self.imageView.image
+        
+        timer.invalidate()
+
+        // タイマーを削除しておく(timer.invalidateだけだとtimerがnilにならないため)
+        timer = nil
+        
         }
     
     //startButtonのoutlet接続（再生/停止の表示を切替するため）
