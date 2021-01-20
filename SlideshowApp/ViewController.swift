@@ -12,23 +12,40 @@ class ViewController: UIViewController {
 
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        
+        
+        
     }
     
     // segueが動作することをViewControllerに通知するメソッド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //再生中か停止中かnilで判断
+        if (timer == nil) {
         
             //遷移先のViewControllerを取得
             let next = segue.destination as? ReViewController
       
         //用意した遷移先の変数imageView2にimageViewを画像として渡す
             next?.imageView2 = self.imageView.image
-        
+            
+        } else {
+            
+            
+            //遷移先のViewControllerを取得
+            let next = segue.destination as? ReViewController
+      
+        //用意した遷移先の変数imageView2にimageViewを画像として渡す
+            next?.imageView2 = self.imageView.image
+            
         timer.invalidate()
 
         // タイマーを削除しておく(timer.invalidateだけだとtimerがnilにならないため)
         timer = nil
         
         }
+        
+    }
     
     //startButtonのoutlet接続（再生/停止の表示を切替するため）
     @IBOutlet weak var startButton: UIButton!
