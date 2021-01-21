@@ -63,7 +63,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="eAV-Do-97d" id="GIX-pv-sG5"/>
                         <outlet property="imageView" destination="lNg-6V-4Yi" id="UDD-Dp-YOm"/>
+                        <outlet property="nextButton" destination="iWu-2J-p6I" id="Whc-Di-ujF"/>
                         <outlet property="startButton" destination="cI3-Tg-20E" id="toS-Jz-Zo4"/>
                     </connections>
                 </viewController>

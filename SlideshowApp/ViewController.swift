@@ -42,6 +42,15 @@ class ViewController: UIViewController {
 
         // タイマーを削除しておく(timer.invalidateだけだとtimerがnilにならないため)
         timer = nil
+            
+            // ボタンの名前を再生に直す
+            startButton.setTitle("再生", for: .normal)
+            
+            //UIButtonを有効化
+            backButton.isEnabled = true
+            
+            //UIButtonを有効化
+            nextButton.isEnabled = true
         
         }
         
@@ -49,6 +58,12 @@ class ViewController: UIViewController {
     
     //startButtonのoutlet接続（再生/停止の表示を切替するため）
     @IBOutlet weak var startButton: UIButton!
+    
+    //自動再生中に戻るボタンを押せなくする為
+    @IBOutlet weak var backButton: UIButton!
+    
+    //自動再生中に進むボタンを押せなくする為
+    @IBOutlet weak var nextButton: UIButton!
     
     //imageViewのoutlet接続（写真を表示する為）
     @IBOutlet weak var imageView: UIImageView!
@@ -90,6 +105,7 @@ class ViewController: UIViewController {
         let name = imageName[changeImgNo]
         imageView.image = UIImage(named: name)
         }
+        
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -103,9 +119,11 @@ class ViewController: UIViewController {
         } else if changeImgNo == 2 {
             changeImgNo = 1
         }
+
         let name = imageName[changeImgNo]
         imageView.image = UIImage(named: name)
         }
+        
     }
     
     @IBAction func slideButon(_ sender: Any) {
@@ -120,6 +138,13 @@ class ViewController: UIViewController {
             // ボタンの名前を停止に変える
             startButton.setTitle("停止", for: .normal)
             
+            //UIButtonを無効化
+            backButton.isEnabled = false
+            
+            //UIButtonを無効化
+            nextButton.isEnabled = false
+            
+            
         } else {
             // 停止時の処理を実装
             // タイマーを停止する
@@ -130,6 +155,13 @@ class ViewController: UIViewController {
 
             // ボタンの名前を再生に直す
             startButton.setTitle("再生", for: .normal)
+            
+            //UIButtonを有効化
+            backButton.isEnabled = true
+            
+            //UIButtonを有効化
+            nextButton.isEnabled = true
+            
         }
 
     }
